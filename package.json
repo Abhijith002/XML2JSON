@@ -1,0 +1,33 @@
+{
+  "name": "xml2json",
+  "version": "1.0.0",
+  "description": "Convert XML data to JSON",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack:win64": "electron-packager . $npm_package_productName --out=./ --platform=win32 --arch=x64 app-version=1.0 --icon=./assets/walmart-icon.ico"
+  },
+  "repository": "",
+  "keywords": [
+    "Walmart",
+    "Converter",
+    "start",
+    "XML",
+    "JSON"
+  ],
+  "author": "Abhijith Manjunath",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^6.0.6",
+    "electron-installer-dmg": "^3.0.0",
+    "electron-packager": "^14.0.5",
+    "electron-winstaller": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-datepicker": "^1.9.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "xml2js": "^0.4.21"
+  }
+}

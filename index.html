@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>XML to JSON Converter</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css" />
+  <script>let $ = require('jquery');</script>
+  <script>require('popper.js');</script>
+  <script>require('bootstrap');</script>
+  <script>require('bootstrap-datepicker');</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row d-flex justify-content-center" style="margin-top: 5%">
+      <img alt="Walmart Logo" src="assets/walmart.png" class="img-thumbnail" />
+  </div>
+    <div class="row d-flex justify-content-center" style="margin-top: 5%">
+      <h3>XML to JSON converter</h3>
+    </div>
+    <div id="loader" class="d-flex justify-content-center" style="visibility: hidden;">
+        <div class="spinner-border spinner-border-sm" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    <div style="margin-top: 5%;">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Initial Load</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">Delta Load</label>
+    </div>
+    <div class="form-check form-check-inline" id="fromDate" hidden>
+    <input id="inpFromDate" type="text" class="form-control" data-provide="datepicker" autoclose="true" placeholder="From Date">
+  </div>
+  <div class="form-check form-check-inline" id="toDate" hidden>
+  <input id="inpToDate" type="text" class="form-control" data-provide="datepicker" autoclose="true" placeholder="To Date">
+</div>
+  </div>
+    <div class="row d-flex justify-content-center" style="margin-top: 5%">
+      <div class="input-group mb-3">
+        <input id="inpFile" type="text" class="form-control" placeholder="Select source file path" aria-label="Source File Path" aria-describedby="button-addon2" disabled>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Select</button>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <input id="outFile" type="text" class="form-control" placeholder="Select target file path" aria-label="Target File Path" aria-describedby="button-addon3" disabled>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon3">Select</button>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5">
+  <button id="btn" type="button" class="btn btn-primary btn-md btn-block">Convert</button>
+</div>
+<div class="col-md-5">
+  <button id="btnRtr" type="button" class="btn btn-primary btn-md btn-block">Retrieve and Convert</button>
+  </div>  
+</div>
+</div>
+<div class="row d-flex justify-content-center" style="margin-top: 3%;">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="true">
+    <div class="toast-header">
+      <strong class="mr-auto">SOAP</strong>
+      <small id="smallAlert">11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js">
+  </script>
+</body>
+</html>
