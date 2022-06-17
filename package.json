@@ -18,7 +18,7 @@
   "author": "Abhijith Manjunath",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^6.0.6",
+    "electron": "^15.5.5",
     "electron-installer-dmg": "^3.0.0",
     "electron-packager": "^14.0.5",
     "electron-winstaller": "^4.0.0"
